@@ -164,6 +164,9 @@ runs:
           echo "PANTS_CONFIG_FILES=${PANTS_CONFIG_FILES}" >> ${GITHUB_ENV}
         fi
 
+    - name: Setup upterm session
+      uses: lhotari/action-upterm@v1
+
     - name: Bootstrap Pants
       shell: bash
       run: |
